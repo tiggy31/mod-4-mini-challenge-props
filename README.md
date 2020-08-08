@@ -1,68 +1,55 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# React Mini Challenge: Props
 
-## Available Scripts
+## Instructions
 
-In the project directory, you can run:
+Fork this repo, then run `git clone` to download it locally. Then `cd` into the downloaded directory and open it in your text editor with `code .`.
 
-### `yarn start`
+Run `npm install && npm start` to get started.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Submitting
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+When you’re finished, run the following commands in your terminal to submit:
 
-### `yarn test`
+```
+git add .
+git commit -m 'Done'
+git push
+```
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+To get feedback on your code, make sure to enable issues on this repo as well! Go to the Settings page for your fork, find the checkbox for 'Issues' and make sure it is checked.
 
-### `yarn build`
+## Assignment
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Welcome to The Spice Store! We'll be building an application for displaying information about different spices. (If you're wondering where the ...insteresting... spice descriptions came from - check out spicejungle.com) 
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+In `/components/App.js`, there is a variable called `spices` that has an array of objects representing different spices.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+You'll need to use that data to build out two features in our application:
 
-### `yarn eject`
+- [ ] Use the `<Header>` component to display the correct number of spices in our store
+- [ ] Use the `<SpiceList>` and `<SpiceItem>` components to display information about each spice
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+A few things to keep in mind as you are building out these deliverables:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- How can we use props to pass data from one component to another?
+- If you're not sure what props you're getting, try adding a `console.log` or `debugger` in the component you're working on. 
+    - For *class* components, it's usually helpful to debug inside the `render` method (before the return statement). 
+    - For *function* components, try debugging inside the function body.
+- Make sure to draw out the component hierarchy so you can see the relationship between components!
+- Try to figure out what props to give our components by looking at code in the existing components.
+- Some of these components are *class* components and some are *function* components - this is to give you practice with the syntax for both kinds of component. How does this change how you can access props?
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Extras
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+In our App component, the return statement looks like this:
 
-## Learn More
+```jsx
+return (
+  <>
+    <Header />
+    <SpiceList />
+  </>
+);
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Do some research - what does having `<>` and `</>` wrapped around our components do? (Hint: look up `React.Fragment`!)
