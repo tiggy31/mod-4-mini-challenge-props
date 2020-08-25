@@ -77,8 +77,9 @@ function App() {
   // What props do each of these components expect?
   return (
     <>
-      <Header />
-      <SpiceList />
+      <Header spiceCount= {spices.length} />
+
+      <SpiceList spices={spices} />
     </>
   );
 }
